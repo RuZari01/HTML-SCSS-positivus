@@ -1,0 +1,46 @@
+.banner {
+  --bannerImageOffetY: 24px;
+
+  padding-block: var(--bannerImageOffetY);
+
+  @include tablet {
+    --bannerimageoffety: 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-gray;
+    border-radius: $border-radius-large;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 26px;
+    padding: 60px;
+
+    @include tablet {
+      padding: 50px;
+    }
+
+    @include mobile {
+      row-gap: 20px;
+    }
+  }
+
+  &__description {
+    max-width: 500px;
+  }
+
+  &__image {
+    margin-block: calc(var(--bannerImageOffetY) * -1);
+
+    @include tablet {
+      max-width: 40%;
+      height: auto;
+    }
+  }
+}
